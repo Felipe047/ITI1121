@@ -10,7 +10,7 @@ public class Q3_AverageDemo{
 		double result = 0;
         
         for (double d : values) {
-            result =+ d;
+            result = result + d;
         }
 
         result = result / values.length;
