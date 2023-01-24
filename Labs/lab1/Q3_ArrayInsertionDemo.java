@@ -2,8 +2,19 @@ public class Q3_ArrayInsertionDemo{
 
 	public static int[] insertIntoArray(int[] beforeArray, int indexToInsert, int valueToInsert){
 		// Your code here
-        beforeArray[indexToInsert - 1] = valueToInsert;
-        return beforeArray;
+        int[] afterArray = new int[beforeArray.length + 1];
+
+        for (int i = 0; i < indexToInsert; i++) {
+            afterArray[i] = beforeArray[i];
+        }
+
+        afterArray[indexToInsert] = valueToInsert;
+
+        for (int i = beforeArray.length - 1; i >= indexToInsert; i--) {
+            afterArray[i + 1] = beforeArray[i];
+        }
+
+        return afterArray;
 	}
 
     private static void printArray(int[] array) {
