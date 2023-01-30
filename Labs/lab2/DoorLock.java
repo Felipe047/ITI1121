@@ -14,7 +14,7 @@ public class DoorLock {
         this.combination = combination;
         this.numberOfAttempts = 0;
         this.open = false;
-        this.activated = false;
+        this.activated = true;
     }
 
     // Access methods.
